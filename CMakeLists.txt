@@ -130,7 +130,8 @@ include_directories(
 # add_dependencies(maidbot_scanner ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(maidbot_scanner_node src/maidbot_scanner_node.cpp)
+add_executable(maidbot_scanner_node src/maidbot_scanner_node.cpp)
+target_link_libraries(maidbot_scanner_node ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
