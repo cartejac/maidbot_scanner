@@ -1,0 +1,10 @@
+Maidbot Scanner: A simple ROS programming demo for Jackson Carter's 2016 Maidbot interview
+
+See package.xml for a more detailed package description
+
+References
+	Sensor Specifications: http://www.robotshop.com/en/hokuyo-utm-03lx-laser-scanning-rangefinder.html?gclid=CNOth__OsssCFQeRfgodzr4MwQ#Specifications
+	ROS Frame Naming Conventions: http://www.ros.org/reps/rep-0105.html
+	ROS Coordinate Frame and Measurement Conventions: http://www.ros.org/reps/rep-0103.html
+	Static Transform Publisher Reference: http://wiki.ros.org/tf#static_transform_publisher
+	Quaternion Reference: http://www.cprogramming.com/tutorial/3d/quaternions.html
