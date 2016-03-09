@@ -3,9 +3,14 @@
 	<!-- Scanner parameters -->
 	<param name="laser_scan_period" value="0.025" type="double" />
 	<param name="scanner_frame_id" value="laser_scanner" type="str" />
+	<param name="scan_range" value="4.71238898038469" type="double" />
+	<param name="scanner_angular_res" value="0.004363323129985824" type="double" />
 	
 	<!-- Define the transform between the base of the robot and the laser scanner -->
-	<node name="laser_scanner_frame_mgr" type="static_transform_publisher" pkg="tf" args="0 0 0 0 0 0 1 /base_link /laser_scanner 10" />
+	<node name="laser_scanner_base_frame_mgr" type="static_transform_publisher" pkg="tf" args="0 0 1.0 0 0 0 1 /base_link /laser_scanner_base 10" />
+	
+	<!-- Define a placeholder rotation frame publisher. Later code will spin the scanner -->
+	<node name="laser_scanner_frame_mgr" type="static_transform_publisher" pkg="tf" args="0 0 0 0 0.707 0 0.707 /laser_scanner_base /laser_scanner 10" />
 	
 	<node name="maidbot_scanner_node" type="maidbot_scanner_node" pkg="maidbot_scanner" output="screen"/>
 </launch>
